@@ -2,7 +2,7 @@
 name: ECS Service Deployment
 
 on:
-  pull_request:
+  push:
     branches:
       - feat/pl-staging-production-env
   workflow_dispatch:
