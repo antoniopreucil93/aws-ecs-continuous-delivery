@@ -38,5 +38,5 @@ jobs:
 
       - name: Deploy Amazon ECS task definition
         run: copilot deploy -e test
-        with:
+        env:
           VARIABLES: "hello world"
