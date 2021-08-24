@@ -8,23 +8,18 @@ export class AppController {
 
   @Get()
   async getHello() {
-    const region = 'eu-central-1';
-    const secretName = 'ENV_TEST_APP';
-
-    // Create a Secrets Manager client
-    const client = new AWS.SecretsManager({
-      region: region,
-    });
-
-    const { SecretString } = await client
-      .getSecretValue({ SecretId: secretName })
-      .promise();
-
-    const secret = JSON.parse(SecretString);
-
-    console.log(process.env.GITHUB_TOKEN, ' data');
-
-    return secret['FIRST_ENV'];
+    // const region = 'eu-central-1';
+    // const secretName = 'ENV_TEST_APP';
+    // // Create a Secrets Manager client
+    // const client = new AWS.SecretsManager({
+    //   region: region,
+    // });
+    // const { SecretString } = await client
+    //   .getSecretValue({ SecretId: secretName })
+    //   .promise();
+    // const secret = JSON.parse(SecretString);
+    // console.log(process.env.GITHUB_TOKEN, ' data');
+    // return secret['FIRST_ENV'];
   }
 
   @Get('hello')
