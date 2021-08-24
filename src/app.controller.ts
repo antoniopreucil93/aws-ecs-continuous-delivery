@@ -26,4 +26,9 @@ export class AppController {
 
     return secret['FIRST_ENV'];
   }
+
+  @Get('hello')
+  getHelloWorld() {
+    return 'hello world';
+  }
 }
