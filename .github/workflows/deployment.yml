@@ -4,12 +4,10 @@ name: ECS Service Deployment
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+      environment:
+        description: 'Enter environment name for deployment.'
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
+        default: 'test'
 jobs:
   deploy:
     name: Continous Deployment
