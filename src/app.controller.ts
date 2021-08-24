@@ -12,6 +12,6 @@ export class AppController {
 
   @Get('hello')
   getHelloWorld() {
-    return 'hello world';
+    return `hello world ${process.env.VARIABLES} |||||||`;
   }
 }
